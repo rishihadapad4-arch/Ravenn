@@ -1,0 +1,9 @@
+
+{
+  "name": "RAVEN",
+  "description": "A private, secure social and messaging platform for elite communities and clans. Build your House, secure your legacy.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

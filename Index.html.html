@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAVEN - Messaging</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#FF6B35">
+    <!-- Firebase SDK for real-time messaging -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- Login Page -->
+        <div id="login-page" class="page active">
+            <header class="header">
+                <h1>RAVEN</h1>
+                <p>Invite-only messaging for your clan.</p>
+            </header>
+            <form id="login-form">
+                <input type="text" id="username" placeholder="Enter username" required>
+                <input type="text" id="invite-code" placeholder="Invite code (e.g., RAVEN123)" required>
+                <button type="submit">Join Chat</button>
+            </form>
+        </div>
+
+        <!-- Chat Page -->
+        <div id="chat-page" class="page">
+            <header class="header">
+                <button id="back-btn">&larr; Back</button>
+                <h1>Gaming Clan</h1> <!-- Simplified to one house -->
+            </header>
+            <div id="chat-messages"></div>
+            <form id="message-form">
+                <input type="text" id="message-input" placeholder="Type a message..." required>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

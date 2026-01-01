@@ -1,0 +1,111 @@
+/* Dark theme with orange accents */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #121212;
+    color: #E0E0E0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: background 0.3s ease; /* Smooth overall transition */
+}
+
+#app {
+    width: 100%;
+    max-width: 600px;
+    background: #1E1E1E;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 107, 53, 0.3);
+    overflow: hidden;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth app transitions */
+}
+
+.page {
+    display: none;
+    padding: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth page transitions */
+}
+
+.page.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    color: #FF6B35;
+    margin: 0;
+}
+
+button {
+    background: #FF6B35;
+    color: #121212;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #E55A2B;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background: #2A2A2A;
+    border: 1px solid #FF6B35;
+    border-radius: 5px;
+    color: #E0E0E0;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #FF8C42;
+}
+
+#chat-messages {
+    height: 300px;
+    overflow-y: auto;
+    background: #2A2A2A;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    scroll-behavior: smooth; /* Smooth scroll */
+}
+
+.message {
+    margin: 10px 0;
+    padding: 10px;
+    background: #333;
+    border-radius: 5px;
+    animation: fadeIn 0.5s ease; /* Smooth message appearance */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    #app {
+        width: 100%;
+        border-radius: 0;
+    }
+    .page {
+        padding: 10px;
+    }
+}
